@@ -1,0 +1,9 @@
+# Project-Junior
+31 oktober 2023, Selasa, 22:46.
+Tujuanku membuat ini?
+1. Di sini aku mengimplementasikan salah satu metode belajarku, yaitu Based Project Learning. Jadi, metode ini mengharuskanku untuk belajar dengan cara membuat project secara langsung.
+2. Di sini aku bertujuan untuk menyimpan source codeku apabila laptopku terjadi kerusakan, jadi source code milikku sudah tersimpan di sini sehingga aku tidak perlu takut lagi kehilangan. Selain itu, aku juga ingin menampilkan projekku pada orang lain.
+3. Aku juga ingin melihat bagaimana progressku di dunia perkodingan.
+
+Resolusiku :
+1. Aku akan membuat project sebanyak-banyaknya minimal 2 project per minggu kalau bisa.
