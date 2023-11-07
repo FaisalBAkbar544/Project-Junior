@@ -1,0 +1,159 @@
+package Project1;
+
+import java.util.Scanner;
+
+public class Pertumbuhan_Penduduk {
+//    https://adjar.grid.id/read/543552856/cara-menghitung-pertumbuhan-penduduk-materi-geografi-kelas-11-kurikulum-merdeka?page=all
+
+    public static void main(String[] args) {
+        Scanner input1 = new Scanner(System.in);
+        int menu;
+        System.out.println("Kalkulator pertumbuhan pendudukan");
+        System.out.println("Menu (1/2/3/4/5): ");
+        System.out.println("1. Pertumbuhan penduduk alami");
+        System.out.println("2. Pertumbuhan penduduk nonalami");
+        System.out.println("3. Pertumbuhan penduduk Total");
+        System.out.println("4. Pengen tau informasi aja nih ");
+        System.out.println("Silahkan pilih menu : ");
+        menu = input1.nextInt();
+        if (menu == 1) {
+            System.out.println("======================Pertumbuhan penduduk alami======================");
+            System.out.print("Masukkan angka kematian dalam setahun : ");
+            int L = input1.nextInt();
+            System.out.print("Masukkan angka kelahiran dalam setahun : ");
+            int M = input1.nextInt();
+            System.out.println("Jadi pertumbuhan penduduk alaminya adalah : " + pendudukAlami(L, M));
+
+        } else if (menu == 2) {
+            System.out.println("=====================Pertumbuhan penduduk nonalami=====================");
+
+        } else if (menu == 3) {
+
+        } else if (menu == 4) {
+
+        } else {
+            System.out.println("Menu yang dimasukkan tidak ada");
+        }
+
+    }
+
+    public static int pendudukAlami(int L, int M) {
+//Pada dasarnya, pengukuran pertumbuhan penduduk alami didapatkan dari selisih angka kelahiran dan angka kematian dalam satu tahun.
+//
+//Pertumbuhan penduduk alami bisa diketahui dengan menggunakan rumus: P = L – M.
+//
+//P = Pertumbuhan penduduk
+//
+//L = Lahir
+//
+//M = Mati
+        return L - M;
+    }
+
+    public static int pendudukNonalami(int I, int E) {
+//Pertumbuhan penduduk nonalami didapatkan dari perhitungan selisih antara penduduk pendatang atau imigran dengan penduduk keluar atau emigran.
+//rumus: P = I – E.
+//P = pertumbuhan penduduk
+//I = imigrasi
+//E = Emigrasi
+        int pAlami = I - E;
+        return pAlami;
+    }
+
+    public static int pendudukTotal(int L, int M, int pAlami) {
+//Pertumbuhan penduduk total memperhatikan faktor angka kelahiran,angka kematian, dan perpindahan penduduk
+//rumus: P = (L – M) + (I – E). 
+//P = Jumlah pertumbuhan penduduk dalam waktu setahun.
+//
+//L = Jumlah penduduk dalam setahun.
+//M = Jumlah kematian dalam setahun.
+//
+//I = Imigrasi
+//
+//E = Emigrasi
+        int pTotal = (L - M) + (pAlami);
+        return pTotal;
+    }
+
+    public static String informasi(String menu) {
+        Scanner input2 = new Scanner(System.in);
+        String menu2, menu11, menu21, menu3, menu211, menu212;
+        //Proses tinggal memasukkan pengertian dan faktor-faktor saja, untuk kondisi sudah benar.
+        do {
+            System.out.println("Pengen tau apa nih? :");
+            System.out.println("1. Pengertian ");
+            System.out.println("2. Faktor-faktor");
+            menu2 = input2.nextLine();
+            if (menu2 == "1") {
+                System.out.println("Pengertian apa tuh?");
+                System.out.println("1. Penduduk Alami");
+                System.out.println("2. Penduduk Non-Alami");
+                System.out.println("3. Penduduk Total");
+                System.out.print("silahkan pilih : ");
+                menu11 = input2.nextLine();
+
+                if (menu11 == "1") {
+
+                } else if (menu11 == "2") {
+
+                } else if (menu11 == "3") {
+
+                } else {
+                    System.out.println("Menu yang dimasukkan tidak ada");
+                }
+            } else if (menu2 == "2") {
+                System.out.println("Penasaran dengan faktor-faktor Rendahnya atau tingginya pertumbuhan nih?");
+                System.out.println("1. Rendah dong");
+                System.out.println("2. Tinggi dong");
+                System.out.print("Silahkan pilih : ");
+                menu21 = input2.nextLine();
+
+                if (menu21 == "1") {
+                    //faktor-faktor rendahnya pertumbuhan penduduk
+                    System.out.println("1. Penduduk Alami");
+                    System.out.println("2. Penduduk Non-Alami");
+                    System.out.println("3. Penduduk Total");
+                    System.out.print("silahkan pilih : ");
+                    menu211 = input2.nextLine();
+                    if (menu211 == "1") {
+
+                    } else if (menu211 == "2") {
+
+                    } else if (menu211 == "3") {
+
+                    } else {
+                        System.out.println("Menu yang dimasukkan tidak ada");
+                    }
+
+                } else if (menu21 == "2") {
+                    //faktor-faktor tingginya pertumbuhan penduduk
+                    System.out.println("1. Penduduk Alami");
+                    System.out.println("2. Penduduk Non-Alami");
+                    System.out.println("3. Penduduk Total");
+                    System.out.print("silahkan pilih : ");
+                    menu212 = input2.nextLine();
+                    if (menu212 == "1") {
+
+                    } else if (menu212 == "2") {
+
+                    } else if (menu212 == "3") {
+
+                    } else {
+                        System.out.println("Menu yang dimasukkan tidak ada");
+                    }
+
+                } else {
+                    System.out.println("Menu yang dimasukkan tidak ada");
+                }
+
+            } else {
+                System.out.println("Menu yang dimasukkan tidak ada");
+            }
+
+            System.out.println("Pengen gali lagi?(y/n): ");
+            menu3 = input2.nextLine();
+        } while (menu3.equalsIgnoreCase("y"));
+
+        return menu;
+    }
+}
