@@ -1,0 +1,53 @@
+package Project1;
+
+import java.util.Scanner;
+
+public class jarakWaktuKecepatan {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        //v adalah lambang kecepatan(velocity),s adalah jarak, dan t adalah waktu.
+        //Rumus kecepatan adalah jarak dibagi waktu atau ditulis v = s ÷ t.
+        //Rumus jarak adalah kecepatan dikali waktu
+        //Rumus waktu adalah jarak dibagi kecepatan
+        int v, s, t, menu;
+        System.out.println("===========================Masukkan data============================");
+        System.out.print("Jarak : ");
+        s = input.nextInt();
+        System.out.print("Kecepatan : ");
+        v = input.nextInt();
+        System.out.print("Waktu : ");
+        t = input.nextInt();
+        System.out.println("Apa yg ingin anda ketahui (1/2/3), 1. Kecepatan\n 2. Jarak\n 3. Waktu\n ");
+        menu = input.nextInt();
+        switch (menu) {
+            case 1:
+                System.out.println("Kecepatan dengan jarak " + s + " dengan waktu " + t + "adalah" + kecepatan(s, t) + "Km/Jam");
+
+                break;
+            case 2:
+                System.out.println("Jaraknya adalah " + jarak(v, t));
+                break;
+            case 3:
+                //waktu yang dibutuhkan untuk menempuh jarak dari Jakarta-Bandung adalah 3 jam
+                System.out.println("Waktunya adalah " + waktu(v, s) + " jam");
+                break;
+            default:
+                System.out.println("Menu yang anda masukkan tidak ada. ");
+                break;
+        }
+
+    }
+
+    public static int kecepatan(int s, int t) {
+        return s / t;
+    }
+
+    public static int jarak(int v, int t) {
+        return v * t;
+    }
+
+    public static int waktu(int v, int s) {
+        return s / v;
+    }
+}
